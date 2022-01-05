@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "frankenstein": "packages/frankenstein",
+    "test": "apps/test"
+  }
 }
