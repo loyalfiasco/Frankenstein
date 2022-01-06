@@ -96,18 +96,18 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Expanded(
-              child: Frankenstein(
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4.0),
-                  border: Border.all(),
-                ),
-                onTap: () {
-                  print('HELLO!');
-                },
-                child: const Text('Hello!', style: TextStyle(color: Colors.red)),
+            Frankenstein(
+              flex: 0,
+              padding: const EdgeInsets.all(20.0),
+              canScroll: true,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4.0),
+                border: Border.all(),
               ),
+              onTap: () {
+                print('HELLO!');
+              },
+              child: const Center(child: Text('Hello!', style: TextStyle(color: Colors.red))),
             ),
             const Text(
               'You have pushed the button this many times:',
