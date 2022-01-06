@@ -5,10 +5,10 @@ A straight forward approach to combining commonly used Flutter UI elements into 
 ## Contents
 
 - [Features](#features)
-- [Prerequisite](#prerequisite)
 - [Getting Started](#getting-started)
-- [Plugin Usage](#plugin-usage)
-- [Compatibility with Nx](#compatibility-with-nx)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
 
 ## Features
 

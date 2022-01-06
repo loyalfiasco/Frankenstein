@@ -1,83 +1,42 @@
-# Frankenstein
+# LoyalFiasco - Frankenstein
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-A straight forward approach to combining commonly used Flutter UI elements into a single implementation.
-
 ## Contents
 
+- [Frankenstein](https://github.com/loyalfiasco/Frankenstein/tree/main/packages/frankenstein)
 - [Features](#features)
-- [Prerequisite](#prerequisite)
 - [Getting Started](#getting-started)
-- [Plugin Usage](#plugin-usage)
-- [Compatibility with Nx](#compatibility-with-nx)
+- [License](#license)
+- [Credits](#credits)
 
 ## Features
 
 Here is a list of some of the coolest features of the plugin:
 
-- ✅ SizedBox
-- ✅ GestureDetector
-- ✅ Padding
-- ✅ Expanded
-- ✅ DecoratedBox
-- ✅ SingleChildScrollView
-- ✅ GestureDetector
-- ✅ GestureDetector
+- ✅ Code Scaffolding by NX
+- ✅ A basic runner app to validate the package
+- ✅ Unit tests
+- ✅ Changelog tools
 - ...
 
 ## Getting Started
 
-The Frankenstein plugin currently ships with a single widget named 'ZZ' which enables all of the feature capabilities.
+After cloning the repo you will need to run a few commands to prepare your environment.
 
-Usage is as simple as specifying the properties you want the child to be contained in.
+### Nx
 
-```dart
-ZZ(
-  flex: 0,
-  padding: const EdgeInsets.all(20.0),
-  canScroll: true,
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(4.0),
-    border: Border.all(),
-  ),
-  onTap: () {
-    // Tap handler
-  },
-  child: const Center(
-    child: Text(
-      'Hello!',
-      style: TextStyle(color: Colors.red),
-    ),
-  ),
-),
+Nx is powered by the Node Package Manager, so you will need to install NPM dependencies.
+
+```bash
+$ npm ci
 ```
 
-## Usage
+Following this, you are free to utilize any of the scaffolding functions.
 
-  final Widget child;
-  final void Function()? onTap;
-  final EdgeInsets? padding;
-  final Decoration? decoration;
-  final double? height;
-  final double? width;
-  final int? flex;
-  final bool? canScroll;
+For more information, visit their [documentation](https://www.npmjs.com/package/@nxrocks/nx-flutter).
 
-Here the list of available arguments
-
-| Argument            | Widget                        | Description                         |
-| ------------------- | ----------------------------- | ----------------------------------- |
-| `child`             | _see `Widget`_                | The Widget to be wrapped            |
-| `onTap`             | _see `GestureDetector`_       | Gesture Detection for the Widget    |
-| `padding`           | _see `Padding`_               | Encapsulate the Widget with Padding |
-| `decoration`        | _see `DecoratedBox`_          | Provide Decoration around Widget    |
-| `height`<sup>1</sup>| _see `SizedBox`_              | Set a height for your Widget        |
-| `width`<sup>1</sup> | _see `SizedBox`_              | Set a width for your Widget         |
-| `flex`<sup>1</sup>  | _see `Expanded`_              | Set the flex value of your Widget   |
-| `canScroll`         | _see `SingleChildScrollView`_ | Enable scrolling for your Widget    |
-
-<sup>1</sup> : *These properties are mutually exclusive. If both flex and width/height are specified, only flex will be used.*
+Running the test application can be done using the `npx nx run test:run` command.
 
 ## License
 
