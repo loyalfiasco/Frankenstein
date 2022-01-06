@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Frankenstein(
+            ZZ(
               flex: 0,
               padding: const EdgeInsets.all(20.0),
               canScroll: true,

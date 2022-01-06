@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Frankenstein extends StatelessWidget {
+class ZZ extends StatelessWidget {
   final Widget child;
   final void Function()? onTap;
   final EdgeInsets? padding;
@@ -10,7 +10,7 @@ class Frankenstein extends StatelessWidget {
   final int? flex;
   final bool? canScroll;
 
-  const Frankenstein({
+  const ZZ({
     required this.child,
     this.onTap,
     this.padding,

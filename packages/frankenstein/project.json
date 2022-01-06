@@ -1,6 +1,6 @@
 {
   "root": "packages/frankenstein",
-  "sourceRoot": "packages/frankenstein/src",
+  "sourceRoot": "packages/frankenstein/lib",
   "projectType": "library",
   "targets": {
     "analyze": {
