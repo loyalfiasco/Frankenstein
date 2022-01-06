@@ -79,7 +79,11 @@ Here the list of available arguments
 
 ## License
 
-Copyright (c) 2021-2022 Michael Wrock. Licensed under the MIT License (MIT)
+Copyright (c) 2021-2022 Michael Wrock. Licensed under the BSD License (BSD)
+
+<p>
+  <img src="https://opensource.org/files/OSI_Approved_License.png" width="50">
+</p>
 
 ## Credits 
 
