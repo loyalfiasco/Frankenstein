@@ -1,33 +1,44 @@
 import 'package:flutter/material.dart';
 
 class ZZ extends StatelessWidget {
-  // The bottom level child widget to be wrapped
+  /// The bottom level child widget to be wrapped
   final Widget child;
 
-  // Specified whether a GestureDetector should be created with the provided onTap callback
+  /// Specified whether a GestureDetector should be created with the provided onTap callback
   final void Function()? onTap;
 
-  // Creates a Padding widget with the specified EdgeInsets outside of the DecoratedBox
+  /// Creates a Padding widget with the specified EdgeInsets outside of the DecoratedBox
   final EdgeInsets? margin;
 
-  // Creates a Padding widget with the specified EdgeInsets inside of the DecoratedBox
+  /// Creates a Padding widget with the specified EdgeInsets inside of the DecoratedBox
   final EdgeInsets? padding;
 
-  // Encapsulates the child with a DecoratedBox using the passed in Decoration
+  /// Encapsulates the child with a DecoratedBox using the passed in Decoration
   final Decoration? decoration;
 
-  // Specifies the height of the wrapper. Note: Cannot be used with the flex property
+  /// Specifies the height of the wrapper. Note: Cannot be used with the flex property
   final double? height;
 
-  // Specifies the width of the wrapper. Note: Cannot be used with the flex property
+  /// Specifies the width of the wrapper. Note: Cannot be used with the flex property
   final double? width;
 
-  // Specifies the flex property of an Expanded widget. Note: cannot be used with the width/height properties
+  /// Specifies the flex property of an Expanded widget. Note: cannot be used with the width/height properties
   final int? flex;
 
-  // Indicates whether the child should be wrapped with a SingleChildScrollView
+  /// Indicates whether the child should be wrapped with a SingleChildScrollView
   final bool? canScroll;
 
+  /// Creates the desired Widget hierarchy based on the provided arguments.
+  ///
+  /// Widgets are created in the following order
+  ///  - Padding (margin)
+  ///  - DecoratedBox
+  ///  - Padding (padding)
+  ///  - GestureDetector
+  ///  - SingleChildScrollView
+  ///  - Expanded / SizedBox
+  ///
+  /// Understanding the order is helpful in understanding the outcome when multiple properties are defined.
   const ZZ(
       {required this.child,
       this.onTap,
@@ -89,17 +100,6 @@ class ZZ extends StatelessWidget {
     );
   }
 
-  // Creates the desired Widget hierarchy based on the provided arguments.
-  //
-  // Widgets are created in the following order
-  //  - Padding (margin)
-  //  - DecoratedBox
-  //  - Padding (padding)
-  //  - GestureDetector
-  //  - SingleChildScrollView
-  //  - Expanded / SizedBox
-  //
-  // Understanding the order is helpful in understanding the outcome when multiple properties are defined.
   @override
   Widget build(BuildContext context) {
     // Local property to store the composed Widget return
