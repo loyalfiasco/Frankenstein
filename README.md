@@ -1,5 +1,7 @@
 # Frankenstein
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 A straight forward approach to combining commonly used Flutter UI elements into a single implementation.
 
 ## Contents

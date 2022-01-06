@@ -1,5 +1,6 @@
 name: frankenstein
-description: A tool to simplify life
+description: One Widget to rule most of them
+repository: https://github.com/loyalfiasco/Frankenstein
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
