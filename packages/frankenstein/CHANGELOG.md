@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/loyalfiasco/Frankenstein/compare/v1.0.4...v1.0.5) (2022-01-06)
+
+
+### Bug Fixes
+
+* ensure hierarchy is reflected accurately ([d090b11](https://github.com/loyalfiasco/Frankenstein/commit/d090b1133a3b4c83c28b1f51bfcc23b512e56316))
+
 ### [1.0.4](https://github.com/loyalfiasco/Frankenstein/compare/v1.0.2...v1.0.4) (2022-01-06)
 
 
