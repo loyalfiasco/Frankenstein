@@ -100,29 +100,18 @@ class ZZ extends StatelessWidget {
     );
   }
 
+  // Creates the Widget based on the hierarchy noted above. Please remember that the order is reversed since
+  // children are composed from the bottom up.
   @override
   Widget build(BuildContext context) {
     // Local property to store the composed Widget return
     Widget _child = child;
 
-    // If the margin argument is not null, build the outside Padding
-    if (margin != null) {
-      _child = _buildPadding(_child, margin!);
-    }
-
-    // If the decoration argument is not null, built the DecoratedBox
-    if (decoration != null) {
-      _child = _buildDecoratedBox(_child);
-    }
-
-    // If the padding argument is not null, build the inside Padding
-    if (padding != null) {
-      _child = _buildPadding(_child, padding!);
-    }
-
-    // If the onTap argument is not null, build the GestureDetector
-    if (onTap != null) {
-      _child = _buildGestureDetector(_child);
+    // If the flex argument is not null, build the Expanded; otherwise if the width or height arguments are not null, build the SizedBox
+    if (flex != null) {
+      _child = _buildExpanded(_child);
+    } else if (width != null || height != null) {
+      _child = _buildSizedBox(_child);
     }
 
     // If the canScroll argument is true, build the SingleChildScrollView
@@ -130,11 +119,24 @@ class ZZ extends StatelessWidget {
       _child = _buildScrollView(_child);
     }
 
-    // If the flex argument is not null, build the Expanded; otherwise if the width or height arguments are not null, build the SizedBox
-    if (flex != null) {
-      _child = _buildExpanded(_child);
-    } else if (width != null || height != null) {
-      _child = _buildSizedBox(_child);
+    // If the onTap argument is not null, build the GestureDetector
+    if (onTap != null) {
+      _child = _buildGestureDetector(_child);
+    }
+
+    // If the padding argument is not null, build the inside Padding
+    if (padding != null) {
+      _child = _buildPadding(_child, padding!);
+    }
+
+    // If the decoration argument is not null, built the DecoratedBox
+    if (decoration != null) {
+      _child = _buildDecoratedBox(_child);
+    }
+
+    // If the margin argument is not null, build the outside Padding
+    if (margin != null) {
+      _child = _buildPadding(_child, margin!);
     }
 
     // Return the composed Widget
