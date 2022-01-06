@@ -10,17 +10,17 @@ class ZZ extends StatelessWidget {
   final int? flex;
   final bool? canScroll;
 
-  const ZZ({
-    required this.child,
-    this.onTap,
-    this.padding,
-    this.decoration,
-    this.height,
-    this.width,
-    this.flex,
-    this.canScroll,
-    Key? key
-  }) : super(key: key);
+  const ZZ(
+      {required this.child,
+      this.onTap,
+      this.padding,
+      this.decoration,
+      this.height,
+      this.width,
+      this.flex,
+      this.canScroll,
+      Key? key})
+      : super(key: key);
 
   GestureDetector _buildGestureDetector(Widget child) {
     return GestureDetector(
